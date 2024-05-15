@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html>
+<head>
+    <title>User Registration</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        
+        .square-radio {
+            -webkit-appearance: none; 
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            width: 20px; 
+            height: 20px;
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            margin-right: 10px; 
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .square-radio:checked {
+            background-color: #007bff; 
+        }
+
+        .square-radio::-ms-check {
+            display: none;
+        }
+
+        .radio-label {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <form action="processUser.jsp" method="post">
+        <section id="process-User">
+            <fieldset>
+                <table>
+                <legend>User Details</legend>
+                
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="Enter firstname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="surname">Surname</label></td>
+                        <td><input type="text" id="surname" name="surname" placeholder="Enter firsttname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password</label></td>
+                        <td><input type="text" id="password" name="password" placeholder="Max 10 characters"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="user-type">Type of User</label></td>
+                        <td>
+                            <select id="user-type" name="user-type">
+                                <option value="beginner">Beginner</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td><label for="language">Prefer Language</label></td>
+                        <td>
+                            <!-- Square-shaped radio buttons for preferred language -->
+                            <input type="radio" id="malay" name="language" value="malay" class="square-radio">
+                            <label for="malay" class="radio-label">Malay</label>
+                            <input type="radio" id="english" name="language" value="english" class="square-radio">
+                            <label for="english" class="radio-label">English</label>
+                            <input type="radio" id="mandarin" name="language" value="mandarin" class="square-radio">
+                            <label for="mandarin" class="radio-label">Mandarin</label>
+                            <input type="radio" id="tamil" name="language" value="tamil" class="square-radio">
+                            <label for="tamil" class="radio-label">Tamil</label>
+                        </td>
+                    </tr>
+                </table> 
+                <br><br>
+                <button type="submit">Submit</button>
+                <button type="button">Cancel</button>
+            </fieldset>
+        </section>
+    </form>
+</body>
+</html>
